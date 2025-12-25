@@ -1,0 +1,239 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #0e0e12, #12121b);
+    color: #eee;
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+.container { 
+    max-width: 1200px; 
+    margin: 0 auto; 
+    padding: 0 20px; 
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(15,15,30,.9);
+    color: #fff;
+    padding: 20px 0;
+    box-shadow: 0 4px 20px rgba(0,0,0,.5);
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 { 
+    margin: 0; 
+    font-weight: 700; 
+    letter-spacing: 1px; 
+}
+
+nav ul { 
+    list-style: none; 
+    margin: 0; 
+    padding: 0; 
+    display: flex;
+}
+
+nav li { 
+    margin-left: 30px; 
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color .3s;
+}
+
+nav a:hover { 
+    color: #00d4ff; 
+}
+
+main {
+    padding-top: 100px; /* Prevents content from hiding under fixed header */
+}
+
+.section {
+    padding: 80px 0;
+    text-align: center;
+}
+
+.section h2 {
+    font-size: 3em;
+    margin-bottom: 40px;
+    background: linear-gradient(90deg, #00d4ff, #9d4edd);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+#about p { 
+    max-width: 800px; 
+    margin: 0 auto; 
+    font-size: 1.2em; 
+}
+
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.skills-list li {
+    background: rgba(0, 212, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 15px 30px;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: transform .3s, box-shadow .3s;
+    box-shadow: 0 4px 15px rgba(0,212,255,.2);
+}
+
+.skills-list li:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0,212,255,.4);
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.project {
+    padding: 30px;
+    background: rgba(255,255,255,.05);
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(0,0,0,.3);
+    border: 1px solid rgba(255,255,255,.1);
+    transition: transform .4s;
+}
+
+.project:hover { 
+    transform: translateY(-15px); 
+}
+
+.project h3 { 
+    color: #00d4ff; 
+    font-size: 1.8em; 
+    margin-top: 0;
+}
+
+#contact p {
+    max-width: 800px;
+    margin: 0 auto 40px;
+    font-size: 1.2em;
+}
+
+.social-links {
+    margin: 30px 0;
+}
+
+.social-links a {
+    display: inline-block;
+    margin: 15px;
+    padding: 15px 30px;
+    background: linear-gradient(45deg, #00d4ff, #9d4edd);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: all .3s;
+    box-shadow: 0 4px 15px rgba(0,212,255,.3);
+}
+
+.social-links a:hover {
+    transform: scale(1.1);
+    box-shadow: 0 10px 30px rgba(157,78,221,.5);
+}
+
+#message {
+    background: rgba(15,15,30,.5);
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: grid;
+    gap: 20px;
+}
+
+input, textarea {
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    background: rgba(255,255,255,.1);
+    color: #fff;
+    font-size: 1em;
+    backdrop-filter: blur(5px);
+}
+
+input::placeholder, textarea::placeholder {
+    color: #ccc;
+}
+
+button {
+    padding: 15px;
+    background: linear-gradient(45deg, #00d4ff, #9d4edd);
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all .3s;
+    box-shadow: 0 4px 15px rgba(0,212,255,.3);
+}
+
+button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 30px rgba(157,78,221,.5);
+}
+
+.form-note {
+    margin-top: 30px;
+    font-size: 0.9em;
+    color: #aaa;
+}
+
+footer {
+    background: rgba(15,15,30,.9);
+    color: #aaa;
+    text-align: center;
+    padding: 30px 0;
+}
+
+html { 
+    scroll-behavior: smooth; 
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+    }
+    nav ul {
+        margin-top: 20px;
+    }
+    nav li {
+        margin: 0 15px;
+    }
+    .section h2 {
+        font-size: 2.4em;
+    }
+}
