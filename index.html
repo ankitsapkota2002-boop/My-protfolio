@@ -1,98 +1,198 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ankit Sapkota - Professional Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ankit Sapkota — Portfolio</title>
+<meta name="description" content="Ankit Sapkota — Business Management student and front-end developer based in London.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <div class="container">
-            <h1>Ankit Sapkota</h1>
-            <nav>
-                <ul>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                    <li><a href="#message">Message Me</a></li>
-                </ul>
-            </nav>
+
+<!-- ===== NAV ===== -->
+<header class="nav" id="top">
+  <div class="nav__inner">
+    <a class="nav__brand" href="#top">AS<span class="nav__brand-dot">.</span></a>
+    <nav class="nav__links" id="navLinks">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button class="nav__toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- ===== HERO ===== -->
+<section class="hero">
+  <div class="hero__inner">
+    <div class="hero__copy">
+      <p class="hero__eyebrow">London, UK —  Web Development</p>
+      <h1 class="hero__title">Ankit Sapkota</h1>
+      <p class="hero__tagline">I build clean, functional web front-ends and bring the same
+        precision I learned running a busy bar floor to structuring an interface —
+        organised under pressure, detail-first, easy to work with.</p>
+      <div class="hero__cta">
+        <a href="#projects" class="btn btn--primary">See my work</a>
+        <a href="#contact" class="btn btn--ghost">Get in touch</a>
+      </div>
+      <ul class="hero__meta">
+        <li><span class="hero__meta-label">Languages</span>English · Nepali · Hindi</li>
+        <li><span class="hero__meta-label">Stack</span>HTML · CSS · JavaScript · Java · React</li>
+      </ul>
+    </div>
+
+    <div class="hero__stage" aria-hidden="true">
+      <div class="cube-wrap" id="cubeWrap">
+        <div class="cube" id="cube">
+          <div class="cube__face cube__face--front">HTML</div>
+          <div class="cube__face cube__face--back">CSS</div>
+          <div class="cube__face cube__face--right">JS</div>
+          <div class="cube__face cube__face--left">Java</div>
+          <div class="cube__face cube__face--top">React</div>
+          <div class="cube__face cube__face--bottom">Git</div>
         </div>
-    </header>
+      </div>
+      <div class="hero__stage-hint">drag to rotate</div>
+    </div>
+  </div>
+  <div class="hero__scroll" aria-hidden="true"><span></span></div>
+</section>
 
-    <main>
-        <section id="about" class="section">
-            <div class="container">
-                <h2>About Me</h2>
-                <p>Hello! I'm Ankit Sapkota, a passionate web developer with experience in building modern web applications. I specialize in front-end technologies and have a strong foundation in various programming languages and tools.</p>
-            </div>
-        </section>
+<!-- ===== ABOUT ===== -->
+<section class="section" id="about">
+  <div class="section__inner">
+    <p class="section__eyebrow">01 — About</p>
+    <h2 class="section__title">A generalist by training,<br>a builder by habit.</h2>
+    <p class="section__body">
+     I'm a BSc (Hons) computer science student who spends as much time in code editors as in case studies. My work experience spans different floors in London and Sydney and an administrative & student-support  — roles that taught me how to stay calm, organised, and clear with people under real time pressure.
+I bring that same discipline to front-end development: clean structure, careful layout, and code that does what it says. Currently enhancing my technical skills through Computer Science studies, I'm passionate about building modern, user-friendly web applications that solve real problems. Bridging business acumen with technical expertise is what drives me..
+    </p>
+  </div>
+</section>
 
-        <section id="skills" class="section">
-            <div class="container">
-                <h2>Skills</h2>
-                <ul class="skills-list">
-                    <li>HTML</li>
-                    <li>CSS</li>
-                    <li>JavaScript</li>
-                    <li>Java</li>
-                    <li>React</li>
-                    <li>Git</li>
-                </ul>
-            </div>
-        </section>
+<!-- ===== SKILLS ===== -->
+<section class="section section--alt" id="skills">
+  <div class="section__inner">
+    <p class="section__eyebrow">02 — Skills</p>
+    <h2 class="section__title">Tools I reach for.</h2>
+    <div class="skills-grid">
+      <div class="skill-card">
+        <span class="skill-card__tag">Markup &amp; Style</span>
+        <h3>HTML &amp; CSS</h3>
+        <p>Semantic structure, responsive layout, and hand-built styling — no
+          framework crutch required.</p>
+      </div>
+      <div class="skill-card">
+        <span class="skill-card__tag">Scripting</span>
+        <h3>JavaScript</h3>
+        <p>DOM interaction, form handling, and front-end logic that keeps a page
+          feeling alive.</p>
+      </div>
+      <div class="skill-card">
+        <span class="skill-card__tag">Object-Oriented</span>
+        <h3>Java</h3>
+        <p>Console applications and OOP fundamentals — classes, objects, and clean
+          program flow.</p>
+      </div>
+      <div class="skill-card">
+        <span class="skill-card__tag">Framework</span>
+        <h3>React</h3>
+        <p>Component-based thinking applied to building interfaces that scale
+          beyond a single page.</p>
+      </div>
+      <div class="skill-card">
+        <span class="skill-card__tag">Workflow</span>
+        <h3>Git &amp; GitHub</h3>
+        <p>Version control, commit hygiene, and shipping projects the way real
+          teams do.</p>
+      </div>
+      <div class="skill-card">
+        <span class="skill-card__tag">People</span>
+        <h3>Multilingual Communication</h3>
+        <p>Fluent in English, Nepali, and Hindi — built through hospitality and
+          student-support work.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-        <section id="projects" class="section">
-            <div class="container">
-                <h2>Projects</h2>
-                <div class="projects-grid">
-                    <div class="project">
-                        <h3>Project One</h3>
-                        <p><b>Facebook Clone (Front-End Replica)</b><br>
-This is a simple web project built using HTML and CSS that mimics the layout and look of the Facebook feed. The code shows practice with structuring web pages and using CSS for design and layout. It was created as part of learning core front-end skills in building familiar UI components from scratch. Technologies used: HTML, CSS.</p>
-                    </div>
-                    <div class="project">
-                        <h3>Project Two</h3>
-                        <p><b>Shopping App (Java Console Program)</b><br>
-This repository contains a basic shopping application written in Java. It includes classes like Product and ShopApp showing object-oriented programming fundamentals. The app demonstrates handling simple product data and simulates a basic shopping workflow in a console environment. Technology used: Java.</p>
-                    </div>
-                  
-                </div>
-            </div>
-        </section>
-
-        <section id="contact" class="section">
-            <div class="container">
-                <h2>Contact</h2>
-                <p>Feel free to reach out to me via email at ankitsapkota2002@gmail.com or connect on social media.</p>
-                <div class="social-links">
-                    <a href="https://www.linkedin.com/public-profile/settings?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_self_edit_contact-info%3BkUxom3phQX6q8TT6m0QWOA%3D%3D" target="_blank">LinkedIn</a>
-                    <a href="https://github.com/ankitsapkota2002-boop" target="_blank">GitHub</a>
-                    <a href="https://www.facebook.com/ankit.sapkota.703233" target="_blank">Facebook</a>
-                </div>
-            </div>
-        </section>
-
-        <section id="message" class="section">
-            <div class="container">
-                <h2>Send Me a Message</h2>
-                <form action="https://formspree.io/f/your-form-id" method="POST">
-                    <!-- Replace the action URL with your Formspree endpoint or other service -->
-                    <input type="text" name="name" placeholder="Your Name" required>
-                    <input type="email" name="email" placeholder="Your Email" required>
-                    <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
-                    <button type="submit">Send Message</button>
-                </form>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 Ankit Sapkota. All rights reserved.</p>
+<!-- ===== PROJECTS ===== -->
+<section class="section" id="projects">
+  <div class="section__inner">
+    <p class="section__eyebrow">03 — Projects</p>
+    <h2 class="section__title">Things I've built.</h2>
+    <div class="projects-grid">
+      <article class="project-card">
+        <div class="project-card__head">
+          <span class="project-card__num">01</span>
+          <span class="project-card__stack">HTML · CSS</span>
         </div>
-    </footer>
+        <h3>Facebook Clone</h3>
+        <p>A front-end replica of the Facebook feed layout — built to practice
+          structuring real-world UI components from scratch, including page
+          structure, spacing, and visual hierarchy.</p>
+        <a class="project-card__link" href="https://github.com/ankitsapkota2002-boop" target="_blank" rel="noopener">View on GitHub →</a>
+      </article>
+      <article class="project-card">
+        <div class="project-card__head">
+          <span class="project-card__num">02</span>
+          <span class="project-card__stack">Java</span>
+        </div>
+        <h3>Shopping App</h3>
+        <p>A console-based shopping application demonstrating object-oriented
+          programming fundamentals — Product and ShopApp classes handling product
+          data through a simulated shopping workflow.</p>
+        <a class="project-card__link" href="https://github.com/ankitsapkota2002-boop" target="_blank" rel="noopener">View on GitHub →</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CONTACT ===== -->
+<section class="section section--alt" id="contact">
+  <div class="section__inner">
+    <p class="section__eyebrow">04 — Contact</p>
+    <h2 class="section__title">Send me a message.</h2>
+    <p class="section__body section__body--tight">
+      Fill this in and it'll land straight in my inbox at
+      <a href="mailto:ankitsapkota2002@gmail.com">ankitsapkota2002@gmail.com</a>.
+    </p>
+
+    <form class="contact-form" id="contactForm" novalidate>
+      <div class="form-row">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" placeholder="Your name" required>
+      </div>
+      <div class="form-row">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="you@example.com" required>
+      </div>
+      <div class="form-row">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" placeholder="What's on your mind?" required></textarea>
+      </div>
+      <button type="submit" class="btn btn--primary btn--full">Send Message</button>
+    </form>
+
+    <div class="social-row">
+      <a href="https://www.linkedin.com/public-profile/settings?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_self_edit_contact-info%3BkUxom3phQX6q8TT6m0QWOA%3D%3D" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://github.com/ankitsapkota2002-boop" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://www.facebook.com/ankit.sapkota.703233" target="_blank" rel="noopener">Facebook</a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <p>© <span id="year"></span> Ankit Sapkota. All rights reserved.</p>
+  <a href="#top" class="footer__top">Back to top ↑</a>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
