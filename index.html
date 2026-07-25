@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Ankit Sapkota — Portfolio</title>
-<meta name="description" content="Ankit Sapkota — Business Management student and front-end developer based in London.">
+<meta name="description" content="Ankit Sapkota — Computer Science student and front-end developer based in London.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -15,7 +15,7 @@
 <!-- ===== NAV ===== -->
 <header class="nav" id="top">
   <div class="nav__inner">
-    <a class="nav__brand" href="#top">AS<span class="nav__brand-dot">.</span></a>
+    <a class="nav__brand" href="#top">Ankit Sapkota <span class="nav__brand-dot">.</span></a>
     <nav class="nav__links" id="navLinks">
       <a href="#about">About</a>
       <a href="#skills">Skills</a>
@@ -32,17 +32,17 @@
 <section class="hero">
   <div class="hero__inner">
     <div class="hero__copy">
-      <p class="hero__eyebrow">London, UK —  Web Development</p>
+      <p class="hero__eyebrow">London, UK — Computer Science Student &amp; Developer</p>
       <h1 class="hero__title">Ankit Sapkota</h1>
-      <p class="hero__tagline">I build clean, functional web front-ends and bring the same
-        precision I learned running a busy bar floor to structuring an interface —
-        organised under pressure, detail-first, easy to work with.</p>
+      <p class="hero__tagline">I'm a Computer Science student who builds clean,
+        functional front-ends and enjoys working through problems in code —
+        from structuring a UI to reasoning through an algorithm.</p>
       <div class="hero__cta">
         <a href="#projects" class="btn btn--primary">See my work</a>
         <a href="#contact" class="btn btn--ghost">Get in touch</a>
       </div>
       <ul class="hero__meta">
-        <li><span class="hero__meta-label">Languages</span>English · Nepali · Hindi</li>
+        <li><span class="hero__meta-label">Field of Study</span>Computer Science</li>
         <li><span class="hero__meta-label">Stack</span>HTML · CSS · JavaScript · Java · React</li>
       </ul>
     </div>
@@ -69,10 +69,20 @@
   <div class="section__inner">
     <p class="section__eyebrow">01 — About</p>
     <h2 class="section__title">A generalist by training,<br>a builder by habit.</h2>
-    <p class="section__body">
-     I'm a BSc (Hons) computer science student who spends as much time in code editors as in case studies. My work experience spans different floors in London and Sydney and an administrative & student-support  — roles that taught me how to stay calm, organised, and clear with people under real time pressure.
-I bring that same discipline to front-end development: clean structure, careful layout, and code that does what it says. Currently enhancing my technical skills through Computer Science studies, I'm passionate about building modern, user-friendly web applications that solve real problems. Bridging business acumen with technical expertise is what drives me..
-    </p>
+
+    <div class="about-grid">
+      <div class="about-photo">
+        <img src="me.jpeg" alt="Ankit Sapkota reading a book on cyber security" loading="lazy">
+      </div>
+
+      <p class="section__body about-photo__text">
+        I'm a Computer Science student based in London, interested in front-end
+        development, object-oriented programming, and building things end-to-end —
+        from a first sketch of a layout to a working, deployed site. I like
+        understanding how something works under the hood, not just how to use it,
+        which is why I spend time on both UI details and the logic behind them.
+      </p>
+    </div>
   </div>
 </section>
 
@@ -111,12 +121,6 @@ I bring that same discipline to front-end development: clean structure, careful 
         <h3>Git &amp; GitHub</h3>
         <p>Version control, commit hygiene, and shipping projects the way real
           teams do.</p>
-      </div>
-      <div class="skill-card">
-        <span class="skill-card__tag">People</span>
-        <h3>Multilingual Communication</h3>
-        <p>Fluent in English, Nepali, and Hindi — built through hospitality and
-          student-support work.</p>
       </div>
     </div>
   </div>
@@ -168,16 +172,22 @@ I bring that same discipline to front-end development: clean structure, careful 
       <div class="form-row">
         <label for="name">Name</label>
         <input type="text" id="name" name="name" placeholder="Your name" required>
+        <span class="form-error" id="nameError"></span>
       </div>
       <div class="form-row">
         <label for="email">Email</label>
         <input type="email" id="email" name="email" placeholder="you@example.com" required>
+        <span class="form-error" id="emailError"></span>
       </div>
       <div class="form-row">
         <label for="message">Message</label>
         <textarea id="message" name="message" rows="5" placeholder="What's on your mind?" required></textarea>
+        <span class="form-error" id="messageError"></span>
       </div>
-      <button type="submit" class="btn btn--primary btn--full">Send Message</button>
+      <button type="submit" class="btn btn--primary btn--full" id="submitBtn">
+        <span id="submitBtnText">Send Message</span>
+      </button>
+      <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
     </form>
 
     <div class="social-row">
@@ -193,6 +203,8 @@ I bring that same discipline to front-end development: clean structure, careful 
   <a href="#top" class="footer__top">Back to top ↑</a>
 </footer>
 
+<!-- EmailJS SDK — required so the contact form can deliver messages without a backend server -->
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 <script src="script.js"></script>
 </body>
 </html>

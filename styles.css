@@ -368,6 +368,63 @@ img { max-width: 100%; display: block; }
 
 .section__body--tight { margin-bottom: 40px; }
 
+/* =========================================================
+   About photo
+   ========================================================= */
+.about-grid {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 48px;
+  align-items: center;
+}
+
+.about-photo {
+  position: relative;
+  border-radius: var(--radius);
+  overflow: hidden;
+  aspect-ratio: 4 / 5;
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  box-shadow: 0 20px 40px -20px rgba(0, 0, 0, 0.6);
+}
+
+.about-photo::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: var(--radius);
+  box-shadow: inset 0 0 0 1px rgba(212, 160, 84, 0.25);
+  pointer-events: none;
+}
+
+.about-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 20%;
+  filter: grayscale(45%) contrast(1.05);
+  transition: filter 0.4s ease, transform 0.4s ease;
+}
+
+.about-photo:hover img {
+  filter: grayscale(0%) contrast(1.05);
+  transform: scale(1.03);
+}
+
+.about-photo__text { margin: 0; }
+
+@media (max-width: 720px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .about-photo {
+    max-width: 220px;
+    margin: 0 auto;
+  }
+}
+
 .section__body a { color: var(--accent-2); text-decoration: underline; }
 
 /* =========================================================
@@ -530,6 +587,21 @@ img { max-width: 100%; display: block; }
 .form-row textarea:invalid:not(:placeholder-shown) {
   border-color: #d4665a;
 }
+
+.form-error {
+  font-size: 0.8rem;
+  color: #e08a7f;
+  min-height: 1em;
+}
+
+.form-status {
+  min-height: 1.2em;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.form-status.success { color: var(--accent-2); }
+.form-status.error { color: #e08a7f; }
 
 .social-row {
   display: flex;
